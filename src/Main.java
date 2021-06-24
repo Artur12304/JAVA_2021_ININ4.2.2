@@ -1,10 +1,12 @@
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String [] args) throws IOException {
         System.out.println("Hello world!");
         Human human1 = new Human("Kamil", 12, "man");
         Human human2 = new Human("Ryszard", 50, "woman");
+        Human human3 = new Human("Kasia", 22, "woman");
 
         Animal animal1 = new Animal("lion", "Simba");
         Animal animal2 = new Animal("mouse", "Tom");
@@ -21,12 +23,20 @@ public class Main {
         else if(animal1.weight <= animal2.weight){
             System.out.println(animal2.species+", o nazwie "+animal2.name+" i wadze "+animal2.weight+", jest ciezsze!");
         }
-        System.out.println();
         if(human1.age >= human2.age){
             System.out.println(human1.name+" jest starszy od "+human2.name+", o "+(human1.age - human2.age)+" lata.");
         }
         else if(human1.age <= human2.age){
             System.out.println(human2.name+" jest starszy od "+human1.name+", o "+(human2.age - human1.age)+" lata.");
+        }
+
+        ArrayList <Human> listOfHumans = new ArrayList<>();
+        System.out.println("Lista ludzi: \n");
+        listOfHumans.add(human1);
+        listOfHumans.add(human2);
+        listOfHumans.add(human3);
+        for (Human human: listOfHumans){
+            System.out.println("Imie: "+human.name+" wiek: "+human.age+" Plec: "+human.gender);
         }
     }
 }
