@@ -13,5 +13,20 @@ public class Main {
         Phone phone1 = new Phone("iphone");
         Phone phone2 = new Phone("samsung");
         Phone phone3 = new Phone("xiaomi");
+
+        System.out.println();
+        if(animal1.weight >= animal2.weight){
+            System.out.println(animal1.species+", o nazwie "+animal1.name+" i wadze "+animal1.weight+", jest ciezsze!");
+        }
+        else if(animal1.weight <= animal2.weight){
+            System.out.println(animal2.species+", o nazwie "+animal2.name+" i wadze "+animal2.weight+", jest ciezsze!");
+        }
+        System.out.println();
+        if(human1.age >= human2.age){
+            System.out.println(human1.name+" jest starszy od "+human2.name+", o "+(human1.age - human2.age)+" lata.");
+        }
+        else if(human1.age <= human2.age){
+            System.out.println(human2.name+" jest starszy od "+human1.name+", o "+(human2.age - human1.age)+" lata.");
+        }
     }
 }
